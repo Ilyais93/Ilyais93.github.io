@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projets - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #050816;
+            color: white;
+            overflow-x: hidden;
+        }
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: url('img/projets-bg.jpg') center/cover;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .card {
+            background: #12141D;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px;
+            box-shadow: 0px 0px 15px rgba(145, 94, 255, 0.5);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 0px 25px rgba(145, 94, 255, 0.8);
+        }
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 10px 20px;
+            background: #915EFF;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background: #7A4CDB;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1 class="text-4xl font-bold">🚀 Mes Projets Réseau</h1>
+        <p class="text-lg text-gray-300 mt-4">Voici une sélection de mes travaux en infrastructure réseau et cybersécurité.</p>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Projet 1 -->
+            <div class="card">
+                <img src="img/projet1.jpg" alt="Projet 1">
+                <h2 class="text-2xl font-bold mt-4">🔹 Installation Windows Server</h2>
+                <p class="text-gray-400 mt-2">Installation et configuration d'un serveur Windows avec services réseau essentiels.</p>
+                <a href="fichiers_projets/Install_win_serv.pdf" download class="btn"><i class="fa fa-download"></i> Télécharger</a>
+            </div>
+
+            <!-- Projet 2 -->
+            <div class="card">
+                <img src="img/projet2.jpg" alt="Projet 2">
+                <h2 class="text-2xl font-bold mt-4">🔹 Configuration Switch Client</h2>
+                <p class="text-gray-400 mt-2">Mise en place et configuration des switches pour les clients.</p>
+                <a href="fichiers_projets/Switch_client.pdf" download class="btn"><i class="fa fa-download"></i> Télécharger</a>
+            </div>
+
+            <!-- Projet 3 -->
+            <div class="card">
+                <img src="img/projet3.jpg" alt="Projet 3">
+                <h2 class="text-2xl font-bold mt-4">🔹 Switch Cœur de Réseau</h2>
+                <p class="text-gray-400 mt-2">Configuration avancée d’un switch central pour la gestion du trafic réseau.</p>
+                <a href="fichiers_projets/Switch_coeur.pdf" download class="btn"><i class="fa fa-download"></i> Télécharger</a>
+            </div>
+
+            <!-- Projet 4 -->
+            <div class="card">
+                <img src="img/projet4.jpg" alt="Projet 4">
+                <h2 class="text-2xl font-bold mt-4">🔹 ADP et Réseau LPRS</h2>
+                <p class="text-gray-400 mt-2">Gestion des accès et stratégie réseau pour un établissement.</p>
+                <a href="fichiers_projets/LPRS-ADP.pdf" download class="btn"><i class="fa fa-download"></i> Télécharger</a>
+            </div>
+
+            <!-- Projet 5 -->
+            <div class="card">
+                <img src="img/projet5.jpg" alt="Projet 5">
+                <h2 class="text-2xl font-bold mt-4">🔹 Automatisation avec PowerShell</h2>
+                <p class="text-gray-400 mt-2">Scripts PowerShell pour automatiser des tâches administratives.</p>
+                <a href="fichiers_projets/Powershell.pdf" download class="btn"><i class="fa fa-download"></i> Télécharger</a>
+            </div>
+
+            <!-- Projet 6 -->
+            <div class="card">
+                <img src="img/projet6.jpg" alt="Projet 6">
+                <h2 class="text-2xl font-bold mt-4">🔹 Sécurisation Wi-Fi</h2>
+                <p class="text-gray-400 mt-2">Déploiement d’un réseau Wi-Fi sécurisé avec VLANs et filtrage.</p>
+                <a href="fichiers_projets/wifi.pdf" download class="btn"><i class="fa fa-download"></i> Télécharger</a>
+            </div>
+
+            <!-- Projet 7 -->
+            <div class="card">
+                <img src="img/projet7.jpg" alt="Projet 7">
+                <h2 class="text-2xl font-bold mt-4">🔹 Analyse réseau avec Wireshark</h2>
+                <p class="text-gray-400 mt-2">Capture et analyse de paquets réseau pour le diagnostic et la sécurité.</p>
+                <a href="fichiers_projets/Wireshark.pdf" download class="btn"><i class="fa fa-download"></i> Télécharger</a>
+            </div>
+
+        </div>
+		<script>
+    if (localStorage.getItem("auth") !== "MonMotDePasse") {
+        alert("⛔ Accès refusé ! Redirection vers l'accueil...");
+        window.location.href = "index.html";
+    }
+</script>
+
+    </main>
+
+    <footer class="text-center text-gray-400 py-6">
+        <p>© 2024 Portfolio - <span class="text-custom1">Ilyais</span>. Tous droits réservés.</p>
+        <a href="index.html" class="btn">🏠 Retour à l'accueil</a>
+    </footer>
+
+</body>
+</html>
