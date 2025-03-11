@@ -123,12 +123,22 @@
 
         </div>
 		<script>
-    if (localStorage.getItem("auth") !== "MonMotDePasse") {
-        alert("⛔ Accès refusé ! Redirection vers l'accueil...");
-        window.location.href = "index.html";
-    }
-</script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Vérifie si l'utilisateur a déjà entré le bon mot de passe
+        const passwordCorrect = sessionStorage.getItem("auth") === "MonMotDePasse";
 
+        if (!passwordCorrect) {
+            let userPass = prompt("🔒 Entrez le mot de passe pour accéder aux projets :");
+            if (userPass === "MonMotDePasse") {
+                sessionStorage.setItem("auth", userPass); // Stocke temporairement
+                alert("✅ Accès autorisé !");
+            } else {
+                alert("⛔ Accès refusé ! Redirection vers l'accueil...");
+                window.location.href = "index.html";
+            }
+        }
+    });
+</script>
     </main>
 
     <footer class="text-center text-gray-400 py-6">
