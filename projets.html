@@ -125,11 +125,11 @@
 		<script>
     document.addEventListener("DOMContentLoaded", function () {
         // Vérifie si l'utilisateur a déjà entré le bon mot de passe
-        const passwordCorrect = sessionStorage.getItem("auth") === "Ilyais";
+        const passwordCorrect = sessionStorage.getItem("auth") === "ilyais";
 
         if (!passwordCorrect) {
             let userPass = prompt("🔒 Entrez le mot de passe pour accéder aux projets :");
-            if (userPass === "Ilyais") {
+            if (userPass === "ilyais") {
                 sessionStorage.setItem("auth", userPass); // Stocke temporairement
                 alert("✅ Accès autorisé !");
             } else {
